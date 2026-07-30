@@ -224,6 +224,21 @@
     .card{break-inside:avoid}
     section{padding:34px 24px}
   }
+
+  /* PAGE SWITCH */
+  .pageswitch{
+    position:fixed;right:16px;bottom:16px;z-index:60;
+    display:inline-flex;align-items:center;gap:.5em;
+    font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;font-weight:600;
+    color:var(--gold-bright);text-decoration:none;
+    background:rgba(20,16,49,.86);border:1px solid var(--rule);
+    padding:10px 15px;box-shadow:0 8px 24px -12px rgba(0,0,0,.85);
+    backdrop-filter:blur(5px);
+    transition:color .2s ease,border-color .2s ease,background .2s ease;
+  }
+  .pageswitch:hover,.pageswitch:focus-visible{color:#fff;border-color:var(--gold-bright);background:rgba(28,22,71,.95)}
+  .pageswitch:focus-visible{outline:2px solid var(--gold-bright);outline-offset:2px}
+  @media print{.pageswitch{display:none}}
 </style>
 
 <!-- ============== COVER ============== -->
@@ -484,3 +499,5 @@
 </section>
 
 <div class="footer">A welcome prospectus for incoming students of Strixhaven University &bull; keep this with you; you will want to find your way back to it.</div>
+
+<a class="pageswitch" href="handbook.html">The Student Handbook <span aria-hidden="true">&rarr;</span></a>
