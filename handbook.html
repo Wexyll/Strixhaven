@@ -89,6 +89,21 @@
     .block,.deancard,.tip{break-inside:avoid}
     section{padding:32px 24px}
   }
+
+  /* PAGE SWITCH */
+  .pageswitch{
+    position:fixed;right:16px;bottom:16px;z-index:60;
+    display:inline-flex;align-items:center;gap:.5em;
+    font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;font-weight:600;
+    color:var(--gold-bright);text-decoration:none;
+    background:rgba(20,16,49,.86);border:1px solid var(--rule);
+    padding:10px 15px;box-shadow:0 8px 24px -12px rgba(0,0,0,.85);
+    backdrop-filter:blur(5px);
+    transition:color .2s ease,border-color .2s ease,background .2s ease;
+  }
+  .pageswitch:hover,.pageswitch:focus-visible{color:#fff;border-color:var(--gold-bright);background:rgba(28,22,71,.95)}
+  .pageswitch:focus-visible{outline:2px solid var(--gold-bright);outline-offset:2px}
+  @media print{.pageswitch{display:none}}
 </style>
 
 <!-- COVER -->
@@ -269,3 +284,5 @@
 </section>
 
 <div class="footer">The Student Handbook &bull; a companion to the Strixhaven prospectus &bull; exact rules, spell lists, and numbers live in your copy of the book.</div>
+
+<a class="pageswitch" href="index.html"><span aria-hidden="true">&larr;</span> The Prospectus</a>
